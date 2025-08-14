@@ -1,9 +1,10 @@
 {
     "require": {
-        "php": ">=8.4",
-        "nette/di": "^3.2",
-        "latte/latte": "^3.0",
-        "tracy/tracy": "^2.10"
+      "php": ">=8.4",
+      "nette/di": "^3.2",
+      "latte/latte": "^3.0",
+      "tracy/tracy": "^2.10",
+      "ext-simplexml": "*"
     },
     "autoload": {
         "classmap": [
@@ -21,5 +22,19 @@
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true
         }
+    },
+    "scripts": {
+        "test": [
+            "vendor/bin/phpunit tests"
+        ],
+        "cs-check": [
+            "vendor/bin/phpcs --standard=phpcs.xml"
+        ],
+        "cs-fix": [
+            "vendor/bin/phpcbf --standard=phpcs.xml"
+        ],
+        "phpstan": [
+            "vendor/bin/phpstan analyse -c phpstan.neon"
+        ]
     }
 }

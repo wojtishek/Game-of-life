@@ -27,6 +27,6 @@ class GameOfLifeTest extends TestCase
         $game = new GameOfLife();
         $game->loadXml(__DIR__ . '/assets/birthOfOrganism.xml');
         $game->simulate();
-        $this->assertEquals('spec1', $game->world[1][1]);
+        $this->assertEquals('spec1', $game->getWorld()[1][1]);
     }
 }
