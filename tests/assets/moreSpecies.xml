@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<life>
+    <world>
+        <dimension>5</dimension > <!-- Dimension of the square "world" -->
+        <speciesCount>3</speciesCount> <!-- Number of distinct species -->
+        <iterationsCount>10</iterationsCount> <!-- Number of iterations to be calculated -->
+    </world>
+    <organisms>
+        <organism>
+            <x_pos>0</x_pos> <!-- x position -->
+            <y_pos>0</y_pos> <!-- y position -->
+            <species>spec1</species> <!-- Species type -->
+        </organism>
+        <organism>
+            <x_pos>0</x_pos> <!-- x position -->
+            <y_pos>1</y_pos> <!-- y position -->
+            <species>spec2</species> <!-- Species type -->
+        </organism>
+        <organism>
+            <x_pos>0</x_pos> <!-- x position -->
+            <y_pos>2</y_pos> <!-- y position -->
+            <species>spec3</species> <!-- Species type -->
+        </organism>
+        <organism>
+            <x_pos>1</x_pos> <!-- x position -->
+            <y_pos>2</y_pos> <!-- y position -->
+            <species>spec4</species> <!-- Species type -->
+        </organism>
+    </organisms>
+</life>

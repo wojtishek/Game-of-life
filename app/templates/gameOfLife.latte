@@ -1,0 +1,22 @@
+{extends '@layout.latte'}
+
+{block content}
+
+<table>
+    <tr>
+        <th></th>
+        {for $col = 0; $col < count($world); $col++}
+            <th>{$col}</th>
+        {/for}
+    </tr>
+    {for $y = 0; $y < count($world[0]); $y++}
+        <tr>
+            <th>{$y}</th>
+            {for $x = 0; $x < count($world); $x++}
+                <td class="{if $world[$x][$y]}alive{else}dead{/if}">
+                    {$world[$x][$y]}
+                </td>
+            {/for}
+        </tr>
+    {/for}
+</table>

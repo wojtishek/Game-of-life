@@ -1,0 +1,10 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile
+    container_name: game-of-life_app
+    ports:
+      - '8181:80'
+    volumes:
+      - .:/var/www/html
