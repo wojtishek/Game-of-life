@@ -1,4 +1,6 @@
 .idea
 temp/*
+!temp/.gitkeep
 log/*
+!log/.gitkeep
 vendor
