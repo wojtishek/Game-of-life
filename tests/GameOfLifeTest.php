@@ -26,4 +26,24 @@ class GameOfLifeTest extends TestCase
         $game->simulate();
         $this->assertEquals('spec1', $game->getWorld()[1][1]);
     }
+
+	public function testDeathOfOrganism(): void
+	{
+		$game = new GameOfLife();
+		$game->loadXml(__DIR__ . '/assets/deathOfOrganism.xml');
+		$game->simulate();
+		$this->assertEquals(0, $game->getWorld()[1][1]);
+	}
+
+	public function testSaveAndLoadXml(): void
+	{
+		$game = new GameOfLife();
+		$game->loadXml(__DIR__ . '/assets/initial.xml');
+		$game->simulate();
+		$game->saveToXml(__DIR__ . '/out.xml');
+
+		$newGame = new GameOfLife();
+		$newGame->loadXml(__DIR__ . '/out.xml');
+		$this->assertEquals($game->getWorld(), $newGame->getWorld());
+	}
 }
