@@ -9,7 +9,8 @@
 1. Clone the repository
 2. Run `docker compose up -d`
 3. Run `docker compose exec app composer install`
-4. Visit `http://localhost:8181` in your browser
+4. Edit `initial.xml` file to meet your requirements
+5. Visit `http://localhost:8181` in your browser
 
 ## Testing
 - Run tests with: `docker compose exec app composer test`
