@@ -88,12 +88,13 @@ class GameOfLife
 		}
 	}
 
-	public function visualizeWorld(): void
+	public function visualizeWorld(?string $title = null): void
 	{
 		$latte = new Engine();
 		$latte->setTempDirectory(__DIR__ . '/../../temp');
 		$params = [
 			'world' => $this->world,
+			'title' => $title,
 		];
 		$latte->render(__DIR__ . '/../templates/gameOfLife.latte', $params);
 	}

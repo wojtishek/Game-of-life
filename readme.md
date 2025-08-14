@@ -8,4 +8,5 @@
 ## Run
 1. Clone the repository
 2. Run `docker compose up -d`
-3. Run `docker compose `
+3. Run `docker compose exec app composer install`
+4. Visit `http://localhost:8181` in your browser
