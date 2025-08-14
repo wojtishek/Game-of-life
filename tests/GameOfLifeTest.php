@@ -1,6 +1,7 @@
 <?php declare(strict_types=1);
 
 use App\Model\GameOfLife;
+use Nette\Utils\FileSystem;
 use PHPUnit\Framework\TestCase;
 
 class GameOfLifeTest extends TestCase
@@ -45,5 +46,6 @@ class GameOfLifeTest extends TestCase
 		$newGame = new GameOfLife();
 		$newGame->loadXml(__DIR__ . '/out.xml');
 		$this->assertEquals($game->getWorld(), $newGame->getWorld());
+		FileSystem::delete(__DIR__ . '/out.xml');
 	}
 }
